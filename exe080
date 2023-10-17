@@ -1,0 +1,23 @@
+# lista = []
+# for c in range(0, 5):
+#     num = int(input('Entre com um número: '))
+#     if c == 0 or num > lista[-1]:
+#         lista.append(num)
+#         print('Adicionado no final da lista!')
+#     else:
+#         posicao = 0
+#         while posicao < len(lista):
+#             if num <= lista[posicao]:
+#                 lista.insert(posicao, num)
+#                 print(f'Adicionado na posição: [{posicao}] da lista')
+#                 break
+#             posicao += 1
+# print(f'Essa é a lista na ordem: {lista}')
+
+import bisect
+numbers = []
+for i in range(0, 5):
+    n = int(input('Type a number: '))
+    bisect.insort(numbers, n)
+    print(f'Number {n} included in position {numbers.index(n)}')
+print(f'Numbers typed: {numbers}')
